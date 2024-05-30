@@ -1,7 +1,7 @@
 def main():
     book_path = "books/frankenstein.txt"
     file_contents = read_book(book_path)
-    words = count_words(file_contents)
+    words = words_to_list(file_contents)
     list_of_dict = sort_dict(char_counter_dict(file_contents))
     list_of_dict.sort(reverse=True, key=sort_on)
     
@@ -14,7 +14,7 @@ def read_book(book):
     with open(book) as f:
         return f.read()
      
-def count_words(content):
+def words_to_list(content):
     return content.split()
 
 def char_counter_dict(words):
