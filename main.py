@@ -27,7 +27,10 @@ def num_of_char(words):
 
 def how_often_letter_appears(dict):
     for i in dict:
-        print(f"The '{i}' character was found {dict[i]} times")
+        if i.isalpha() == True:
+            print(f"The '{i}' character was found {dict[i]} times")
+
+
 
 main()
 
