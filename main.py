@@ -4,7 +4,8 @@ def main():
     words = count_words(file_contents)
     
     print(f"{len(words)} words found in the document")
-    how_often_letter_appears(num_of_char(file_contents))
+    print_alpha_count(char_counter_dict(file_contents))
+    print(char_counter_dict(file_contents))
 
 def read_book(book):
     with open(book) as f:
@@ -13,7 +14,7 @@ def read_book(book):
 def count_words(content):
     return content.split()
 
-def num_of_char(words):
+def char_counter_dict(words):
     char_list = {}
     lowercase_words = words.lower()
     words_list = lowercase_words.split()
@@ -25,7 +26,7 @@ def num_of_char(words):
                 char_list[char] += 1
     return char_list
 
-def how_often_letter_appears(dict):
+def print_alpha_count(dict):
     for i in dict:
         if i.isalpha() == True:
             print(f"The '{i}' character was found {dict[i]} times")
